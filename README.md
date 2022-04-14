@@ -5,13 +5,13 @@
 ### Generate new SSH key
 
 ```
-ssh-keygen -t rsa -b 4096 -C "email@example.com"
+ssh-keygen -t ed25519 -C "email@example.com"
 ```
 
 ### Authenticate with generated SSH key
 
 ```
-eval \$(ssh-agent -s)
+eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 ssh -T git@github.com
 ```
